@@ -1,12 +1,14 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6059024dcb2adb48e3f67b29a29c47c4d73db6c6b3425fc608f4846e97c1b411"
+            "sha256": "3e8d62c70fd8dd12ddca4e17d262311743f8b3485a1778df4392b896f8df3d4d"
         },
         "pipfile-spec": 6,
         "requires": {
             "python_full_version": "3.11.4",
-            "python_version": "3.11"
+            "python_version": "3.11",
+            "scrapy": "2.10.*",
+            "scrapy-djangoitem": "1.1.*"
         },
         "sources": [
             {
