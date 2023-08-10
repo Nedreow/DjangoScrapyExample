@@ -1,0 +1,2 @@
+# Django-Scrapy Project Template
+This is an example project you can use to make your own webscrapers using Scrapy and Django. It includes a few example scrapers which use all the important tools offered by Scrapy and Django, including DjangoItem, Itemloaders, Pipelines and Django ORM, data processing using Pandas and Django Rest Framework is used to start spiders and return the results.
