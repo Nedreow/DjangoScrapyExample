@@ -1,10 +1,12 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "3e8d62c70fd8dd12ddca4e17d262311743f8b3485a1778df4392b896f8df3d4d"
+            "sha256": "36afcfbf4354e4ca2745bc7488bd13afd1573a5a6a584967f7e3c3794e66acd8"
         },
         "pipfile-spec": 6,
         "requires": {
+            "djangorestframework": "3.14.0",
+            "markdown": "3.4.*",
             "python_full_version": "3.11.4",
             "python_version": "3.11",
             "scrapy": "2.10.*",
