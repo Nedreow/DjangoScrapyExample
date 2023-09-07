@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:sqlite:C:\Users\NVWA OS - Leenlaptop\PycharmProjects\DjangoScrapyExample\db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="db home" uuid="90f0be1d-8024-4b37-b7fd-28696f2efd06">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:E:\Programming Projects\DjangoScrapyExample\db.sqlite3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

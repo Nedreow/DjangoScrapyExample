@@ -1,16 +1,12 @@
 from django.core.management.base import BaseCommand
-from scraper.scraper.spiders.scrapethissite import ScrapethissiteSpider
-from scrapy.crawler import CrawlerProcess
-from scrapy.utils.project import get_project_settings
-import os
+
+from scraper.apps import SpiderController
 
 class Command(BaseCommand):
     help = "Run the scrapethissite spider and store the results in the database"
 
-    def handle(self, *args, **options):
-        settings_file_path = 'scraper.scraper.settings'  # The path seen from root, ie. from main.py
-        os.environ.setdefault('SCRAPY_SETTINGS_MODULE', settings_file_path)
-        process = CrawlerProcess(get_project_settings())
+    def add_arguments(self, parser):
+        parser.add_argument('spider')
 
-        process.crawl(ScrapethissiteSpider)
-        process.start()
+    def handle(self, *args, **options):
+        SpiderController.run_spider('scrapethissite')
