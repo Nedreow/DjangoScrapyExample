@@ -1,0 +1,38 @@
+# FROM - Image to start building on.
+FROM python:3.11.4
+
+# Install Dutch locale
+RUN apt-get update && \
+    apt-get install -y locales && \
+    sed -i -e 's/# nl_NL.UTF-8 UTF-8/nl_NL.UTF-8 UTF-8/' /etc/locale.gen && \
+    dpkg-reconfigure --frontend=noninteractive locales
+
+ENV LANG nl_NL.UTF-8
+ENV LC_ALL nl_NL.UTF-8
+
+# sets the working directory
+WORKDIR /usr/src/django-docker
+
+# copy these two files from <src> to <dest>
+COPY Pipfile Pipfile.lock ./
+
+# install pipenv on the container
+RUN pip install -U pipenv
+
+# install project dependencies
+RUN pipenv install --system
+
+# copy all files and directories from <src> to <dest>
+COPY . .
+
+# expose the port
+EXPOSE 8000/tcp
+
+# run migrations
+RUN python manage.py migrate
+
+# create superuser
+RUN python manage.py createsuperuser --noinput
+
+# Run the server
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

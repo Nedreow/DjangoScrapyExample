@@ -5,15 +5,15 @@ name = "pypi"
 
 [packages]
 django = "*"
+scrapy = "~=2.10"
+scrapy-djangoitem = "~=1.1"
+djangorestframework = "~=3.14"
+markdown = "~=3.4"
+pandas = "~=2.0"
+matplotlib = "~=3.7"
 
 [dev-packages]
 
 [requires]
 python_version = "3.11"
 python_full_version = "3.11.4"
-scrapy = "2.10.*"
-scrapy-djangoitem = "1.1.*"
-djangorestframework = "3.14.0"
-markdown = "3.4.*"
-pandas = "2.0.*"
-matplotlib = "3.8.*"

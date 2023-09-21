@@ -118,7 +118,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-locale.setlocale(locale.LC_ALL, locale='nl_NL')
+locale.setlocale(locale.LC_ALL, locale='nl_NL.UTF-8')
 
 
 # Static files (CSS, JavaScript, Images)
